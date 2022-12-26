@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-port-service
+spec: 
+  type: ClusterIp
+  selector: 
+    app: dp
+  ports:
+    - port: 8080 # service port
+      targetPort: 80 # pod/container   ports
